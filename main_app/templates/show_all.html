@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Like Status</title>
+</head>
+<body>  
+    <nav class="navbar navbar-expand-sm bg-light">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="/bright_ideas">Bright Ideas</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/logout">Logout</a>
+            </li>
+        </ul>
+    </nav>
+
+
+    <a href="/users/{{ user.id }}">{{wall_message.poster.first_name}}</a> says:
+
+
+    <h3>People who liked this post:</h3>
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Firstname</th>
+                <th>Lastname</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><a href="/bright_ ideas/{{ user.id }}">{{wall_message.poster.first_name}}</a></td>
+                <td>{{ wall_message.poster.last_name }}</td>
+            </tr>
+        </tbody>
+        </table>
+</body>
+</html>
